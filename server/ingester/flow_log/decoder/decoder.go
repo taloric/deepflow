@@ -35,6 +35,7 @@ import (
 	"github.com/deepflowio/deepflow/server/ingester/flow_log/config"
 	"github.com/deepflowio/deepflow/server/ingester/flow_log/dbwriter"
 	"github.com/deepflowio/deepflow/server/ingester/flow_log/log_data"
+	"github.com/deepflowio/deepflow/server/ingester/flow_log/log_data/dd_import"
 	"github.com/deepflowio/deepflow/server/ingester/flow_log/log_data/sw_import"
 	"github.com/deepflowio/deepflow/server/ingester/flow_log/throttler"
 	"github.com/deepflowio/deepflow/server/ingester/flow_tag"
@@ -154,7 +155,8 @@ func (d *Decoder) Run() {
 	decoder := &codec.SimpleDecoder{}
 	pbTaggedFlow := pb.NewTaggedFlow()
 	pbTracesData := &v1.TracesData{}
-	pbSkywalkingData := &pb.SkyWalkingExtra{}
+	pbSkywalkingData := &pb.ThirdPartyTrace{}
+	pbDdTrace := &pb.ThirdPartyTrace{}
 	for {
 		n := d.inQueue.Gets(buffer)
 		start := time.Now()
@@ -185,6 +187,8 @@ func (d *Decoder) Run() {
 				d.handleL4Packet(decoder)
 			case datatype.MESSAGE_TYPE_SKYWALKING:
 				d.handleSkyWalking(decoder, pbSkywalkingData, false)
+			case datatype.MESSAGE_TYPE_DATADOG:
+				d.handleDatadog(decoder, pbDdTrace, false)
 			default:
 				log.Warningf("unknown msg type: %d", d.msgType)
 
@@ -283,7 +287,53 @@ func (d *Decoder) sendOpenMetetry(tracesData *v1.TracesData) {
 	}
 }
 
-func (d *Decoder) handleSkyWalking(decoder *codec.SimpleDecoder, pbSkyWalkingData *pb.SkyWalkingExtra, compressed bool) {
+func (d *Decoder) handleDatadog(decoder *codec.SimpleDecoder, pbThirdPartyData *pb.ThirdPartyTrace, compressed bool) {
+	var err error
+	for !decoder.IsEnd() {
+		bytes := decoder.ReadBytes()
+		pbThirdPartyData.Reset()
+		if len(bytes) > 0 {
+			// universal compression
+			if compressed {
+				bytes, err = decompressOpenTelemetry(bytes)
+			}
+			if err == nil {
+				err = proto.Unmarshal(bytes, pbThirdPartyData)
+			}
+		}
+		if decoder.Failed() || err != nil {
+			if d.counter.ErrorCount == 0 {
+				log.Errorf("skywalking data decode failed, offset=%d len=%d err: %s", decoder.Offset(), len(decoder.Bytes()), err)
+			}
+			d.counter.ErrorCount++
+			continue
+		}
+		d.sendDatadog(pbThirdPartyData.Data, pbThirdPartyData.PeerIp, pbThirdPartyData.Uri)
+	}
+}
+
+func (d *Decoder) sendDatadog(ddogdata, peerIP []byte, uri string) {
+	if d.debugEnabled {
+		log.Debugf("decoder %d vtap %d recv skywalking data length: %d", d.index, d.agentId, len(ddogdata))
+	}
+	d.counter.Count++
+	ls := dd_import.DDogDataToL7FlowLogs(d.agentId, d.orgId, d.teamId, ddogdata, peerIP, uri, d.platformData, d.cfg)
+	for _, l := range ls {
+		l.AddReferenceCount()
+		if !d.throttler.SendWithThrottling(l) {
+			d.counter.DropCount++
+		} else {
+			d.fieldsBuf, d.fieldValuesBuf = d.fieldsBuf[:0], d.fieldValuesBuf[:0]
+			l.GenerateNewFlowTags(d.flowTagWriter.Cache)
+			d.flowTagWriter.WriteFieldsAndFieldValuesInCache()
+			d.appServiceTagWrite(l)
+			d.spanWrite(l)
+		}
+		l.Release()
+	}
+}
+
+func (d *Decoder) handleSkyWalking(decoder *codec.SimpleDecoder, pbSkyWalkingData *pb.ThirdPartyTrace, compressed bool) {
 	var err error
 	for !decoder.IsEnd() {
 		pbSkyWalkingData.Reset()

@@ -70,6 +70,7 @@ use public::{
     l7_protocol::L7Protocol,
     proto::{
         agent::Exception,
+        flow_log,
         integration::opentelemetry::proto::{
             common::v1::{
                 any_value::Value::{IntValue, StringValue},
@@ -224,6 +225,19 @@ async fn aggregate_with_catch_exception(
                 .unwrap()
         }
     })
+}
+
+#[derive(Debug, PartialEq)]
+pub struct Datadog(flow_log::ThirdPartyTrace);
+
+impl Sendable for Datadog {
+    fn encode(mut self, buf: &mut Vec<u8>) -> Result<usize, prost::EncodeError> {
+        self.0.encode(buf).map(|_| self.0.encoded_len())
+    }
+
+    fn message_type(&self) -> SendMessageType {
+        SendMessageType::Datadog
+    }
 }
 
 // for log capture from vector
@@ -599,6 +613,7 @@ async fn handler(
     profile_sender: DebugSender<Profile>,
     application_log_sender: DebugSender<ApplicationLog>,
     skywalking_sender: DebugSender<SkyWalkingExtra>,
+    datadog_sender: DebugSender<Datadog>,
     exception_handler: ExceptionHandler,
     compressed: bool,
     profile_compressed: bool,
@@ -862,6 +877,35 @@ async fn handler(
             )
             .await)
         }
+        // TODO: confirm regex/fuzzy path
+        // path: /api/v0.2,v0.3,v0.4,v0.5,v0.7,
+        // TODO: repeated code, consider make it common
+        (&Method::POST, "/v0.4/traces") => {
+            if external_trace_integration_disabled {
+                return Ok(Response::builder().body(Body::empty()).unwrap());
+            }
+            let (part, body) = req.into_parts();
+            let whole_body = match aggregate_with_catch_exception(body, &exception_handler).await {
+                Ok(b) => b,
+                Err(e) => {
+                    return Ok(e);
+                }
+            };
+            let datadog = decode_metric(whole_body, &part.headers)?;
+            let mut third_party_data = flow_log::ThirdPartyTrace::default();
+            third_party_data.data = datadog;
+            third_party_data.uri = part.uri.path().to_string();
+            third_party_data.peer_ip = match peer_addr.ip() {
+                IpAddr::V4(ip4) => ip4.octets().to_vec(),
+                IpAddr::V6(ip6) => ip6.octets().to_vec(),
+            };
+
+            if let Err(e) = datadog_sender.send(Datadog(third_party_data)) {
+                warn!("datadog_sender failed to send data, because {:?}", e);
+            }
+
+            Ok(Response::builder().body(Body::empty()).unwrap())
+        }
         // Return the 404 Not Found for other routes.
         _ => Ok(Response::builder()
             .status(StatusCode::NOT_FOUND)
@@ -963,6 +1007,7 @@ pub struct MetricServer {
     profile_sender: DebugSender<Profile>,
     application_log_sender: DebugSender<ApplicationLog>,
     skywalking_sender: DebugSender<SkyWalkingExtra>,
+    datadog_sender: DebugSender<Datadog>,
     port: Arc<AtomicU16>,
     exception_handler: ExceptionHandler,
     server_shutdown_tx: Mutex<Option<mpsc::Sender<()>>>,
@@ -991,6 +1036,7 @@ impl MetricServer {
         profile_sender: DebugSender<Profile>,
         application_log_sender: DebugSender<ApplicationLog>,
         skywalking_sender: DebugSender<SkyWalkingExtra>,
+        datadog_sender: DebugSender<Datadog>,
         port: u16,
         exception_handler: ExceptionHandler,
         compressed: bool,
@@ -1020,6 +1066,7 @@ impl MetricServer {
                 profile_sender,
                 application_log_sender,
                 skywalking_sender,
+                datadog_sender,
                 port: Arc::new(AtomicU16::new(port)),
                 exception_handler,
                 server_shutdown_tx: Default::default(),
@@ -1070,6 +1117,7 @@ impl MetricServer {
         let profile_sender = self.profile_sender.clone();
         let application_log_sender = self.application_log_sender.clone();
         let skywalking_sender = self.skywalking_sender.clone();
+        let datadog_sender = self.datadog_sender.clone();
         let port = self.port.clone();
         let monitor_port = Arc::new(AtomicU16::new(port.load(Ordering::Acquire)));
         let (mon_tx, mon_rx) = oneshot::channel();
@@ -1143,6 +1191,7 @@ impl MetricServer {
                     let profile_sender = profile_sender.clone();
                     let application_log_sender = application_log_sender.clone();
                     let skywalking_sender = skywalking_sender.clone();
+                    let datadog_sender = datadog_sender.clone();
                     let exception_handler_inner = exception_handler.clone();
                     let counter = counter.clone();
                     let compressed = compressed.clone();
@@ -1161,6 +1210,7 @@ impl MetricServer {
                         let profile_sender = profile_sender.clone();
                         let application_log_sender = application_log_sender.clone();
                         let skywalking_sender = skywalking_sender.clone();
+                        let datadog_sender = datadog_sender.clone();
                         let exception_handler = exception_handler_inner.clone();
                         let peer_addr = conn.remote_addr();
                         let counter = counter.clone();
@@ -1185,6 +1235,7 @@ impl MetricServer {
                                     profile_sender.clone(),
                                     application_log_sender.clone(),
                                     skywalking_sender.clone(),
+                                    datadog_sender.clone(),
                                     exception_handler.clone(),
                                     compressed.load(Ordering::Relaxed),
                                     profile_compressed.load(Ordering::Relaxed),

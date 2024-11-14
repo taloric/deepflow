@@ -296,7 +296,7 @@ message MqttTopic {
     int32 qos = 2; // -1 mean not exist qos
 }
 
-message SkyWalkingExtra {
+message ThirdPartyTrace {
     bytes data = 1;
     bytes peer_ip = 2;
     string uri = 3;
