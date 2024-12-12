@@ -8,6 +8,11 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: modify log level [#8690](https://github.com/deepflowio/deepflow/pull/8690) by [yuanchaoa](https://github.com/yuanchaoa)
+* fix: query percentile to min/max time [#8685](https://github.com/deepflowio/deepflow/pull/8685) by [taloric](https://github.com/taloric)
+* fix: agent group api responses invalid int value [#8681](https://github.com/deepflowio/deepflow/pull/8681) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* fix: invalid src_interface [#8680](https://github.com/deepflowio/deepflow/pull/8680) by [yuanchaoa](https://github.com/yuanchaoa)
+* fix: Modify the range of the pcp value [#8678](https://github.com/deepflowio/deepflow/pull/8678) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +255,8 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: querier optimization group [#8688](https://github.com/deepflowio/deepflow/pull/8688) by [xiaochaoren1](https://github.com/xiaochaoren1)
+* feat: agent - eBPF Optimize data push logic (#8653) [#8684](https://github.com/deepflowio/deepflow/pull/8684) by [yinjiping](https://github.com/yinjiping)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
