@@ -250,6 +250,10 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: renames MySqlConfig to Config [#8769](https://github.com/deepflowio/deepflow/pull/8769) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* feat: [controller] add vm_count & pod_count in domain api [#8768](https://github.com/deepflowio/deepflow/pull/8768) by [SongZhen0704](https://github.com/SongZhen0704)
+* feat: renames mysql directory to metadb [#8757](https://github.com/deepflowio/deepflow/pull/8757) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* feat: volcengine support vke [#8531](https://github.com/deepflowio/deepflow/pull/8531) by [askyrie](https://github.com/askyrie)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
