@@ -1,0 +1,37 @@
+[package]
+name = "integration_vector"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+async-trait = "0.1.80"
+derivative = "2.2.0"
+futures = "~0.3"
+log = "0.4"
+openssl-probe = { version = "0.1.5", default-features = false }
+serde = "1.0.200"
+serde_with = "3.8.1"
+serde_yaml = "0.9"
+tokio = { version = "1.37.0", features = ["full"] }
+tokio-stream = { version = "0.1.15", default-features = false }
+typetag = "0.2.16"
+inventory = "0.3.15"
+vector-config = { git = "https://gitee.com/deepflowio/vector.git", tag = "v0.43.1", default-features = false }
+vector-lib = { git = "https://gitee.com/deepflowio/vector.git", tag = "v0.43.1", default-features = false }
+vector = { git = "https://gitee.com/deepflowio/vector", tag = "v0.43.1", default-features = false, features = [
+    "enrichment-tables",
+    "sources",
+    "sources-dnstap",
+    "transforms",
+    # build required sinks
+    "sinks-blackhole",
+    "sinks-console",
+    "sinks-prometheus",
+    "sinks-file",
+    "sinks-http",
+    "sinks-opentelemetry",
+    "sinks-vector",
+    "unix",
+    "secrets",
+] }
