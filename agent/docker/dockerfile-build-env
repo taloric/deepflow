@@ -1,0 +1,12 @@
+FROM ghcr.io/deepflowio/rust-build:1.30 as builder
+RUN rustup self uninstall -y
+RUN curl  https://sh.rustup.rs -so restup.sh; bash restup.sh -y
+RUN sed -i s/mirror.centos.org/vault.centos.org/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^#.*baseurl=http/baseurl=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^mirrorlist=http/#mirrorlist=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN yum install -y perl-IPC-Cmd perl-core which gcc-c++ wget unzip
+WORKDIR /root
+RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v3.12.0/protoc-3.12.0-linux-x86_64.zip
+RUN unzip protoc-3.12.0-linux-x86_64.zip -d protoc-3.12.0
+RUN cp -r protoc-3.12.0/bin/* /usr/bin/
+RUN cp -rf protoc-3.12.0/include/* /usr/include/

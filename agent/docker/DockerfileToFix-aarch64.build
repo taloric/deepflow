@@ -8,8 +8,15 @@ ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
     PATH=/usr/local/cargo/bin:$PATH
 
+RUN sed -i s/mirror.centos.org/vault.centos.org/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^#.*baseurl=http/baseurl=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^mirrorlist=http/#mirrorlist=http/g /etc/yum.repos.d/CentOS-*.repo
 # Install base dependencies
-RUN yum install make epel-release centos-release-scl -y && yum -y install jq
+RUN yum install centos-release-scl -y
+RUN sed -i s/mirror.centos.org/vault.centos.org/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^#.*baseurl=http/baseurl=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^mirrorlist=http/#mirrorlist=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN yum install make epel-release -y && yum -y install jq
 RUN yum install gcc gcc-c++ curl devtoolset-11-gcc devtoolset-11-gdb devtoolset-11-gcc-c++ devtoolset-11-binutils openssl-devel libpcap-devel perl-Digest-MD5 elfutils-libelf-devel-static glibc-static zlib-static git emacs-filesystem -y && \
     curl https://sh.rustup.rs -so restup.sh; bash restup.sh -y && \
     source /opt/rh/devtoolset-11/enable && \
@@ -68,4 +75,3 @@ RUN rustup target add aarch64-unknown-linux-musl
 RUN cargo install sccache
 CMD bash
 
-#

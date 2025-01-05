@@ -9,7 +9,14 @@ ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
     PATH=/usr/local/cargo/bin:$PATH
 # 安装自定义软件
-RUN yum install make epel-release centos-release-scl -y && yum -y install jq
+RUN sed -i s/mirror.centos.org/vault.centos.org/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^#.*baseurl=http/baseurl=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^mirrorlist=http/#mirrorlist=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN yum install centos-release-scl -y
+RUN sed -i s/mirror.centos.org/vault.centos.org/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^#.*baseurl=http/baseurl=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^mirrorlist=http/#mirrorlist=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN yum install make epel-release -y && yum -y install jq
 
 # 安装基础依赖#
 RUN  yum install curl devtoolset-11-gcc devtoolset-11-gdb devtoolset-11-gcc-c++ devtoolset-11-binutils openssl-devel libpcap-devel perl-Digest-MD5 elfutils-libelf-devel-static glibc-static zlib-static git -y && \
@@ -34,8 +41,14 @@ RUN  curl https://deepflow-ce.oss-cn-beijing.aliyuncs.com/pkg/compile/x86_64/llv
 
 # 静态编译
 
-RUN yum -y install https://forensics.cert.org/cert-forensics-tools-release-el7.rpm  && \
-    yum -y install musl-libc musl-libc-static musl-clang musl-gcc  && \
+#RUN yum -y install https://forensics.cert.org/cert-forensics-tools-release-el7.rpm  && \
+RUN yum -y install https://github.com/taloric/deepflow/releases/download/file_upload/cert-forensics-tools-release-7-17.noarch.rpm
+RUN sed -i s/mirror.centos.org/vault.centos.org/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^#.*baseurl=http/baseurl=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN sed -i s/^mirrorlist=http/#mirrorlist=http/g /etc/yum.repos.d/CentOS-*.repo
+RUN yum-config-manager --save --setopt=forensics.skip_if_unavailable=true
+RUN yum-config-manager --save --setopt=forensics-splunk.skip_if_unavailable=true
+RUN yum -y install musl-libc musl-libc-static musl-clang musl-gcc perl-IPC-Cmd perl-core which gcc-c++ && \
     cd /usr/x86_64-linux-musl/lib64  && \
     curl https://deepflow-ce.oss-cn-beijing.aliyuncs.com/pkg/compile/x86_64/musl/libbcc_bpf.a --silent -O && \
     curl https://deepflow-ce.oss-cn-beijing.aliyuncs.com/pkg/compile/x86_64/musl/libpcap.a --silent -O && \
@@ -69,3 +82,4 @@ CMD bash
 # cargo build 不加参数编译出来的是 debug 版的可执行文件，
 # 如果想要编译release版的可执行文件，请执行以下操作
 # RUN cargo build --release
+
