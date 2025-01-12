@@ -8,6 +8,7 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: memory profile data not compressed [#8877](https://github.com/deepflowio/deepflow/pull/8877) by [lzf575](https://github.com/lzf575)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -506,6 +507,7 @@
 * feat: server directly reports metrics of load1_by_cpu_num that can be used for alert [#7088](https://github.com/deepflowio/deepflow/pull/7088) by [lzf575](https://github.com/lzf575)
 
 #### Refactoring
+* refactor: close_type is 0, which translates to Others [#8898](https://github.com/deepflowio/deepflow/pull/8898) by [lzf575](https://github.com/lzf575)
 * refactor: Remove legacy agent config [#8586](https://github.com/deepflowio/deepflow/pull/8586) by [rvql](https://github.com/rvql)
 * refactor: modify log of configuration changes [#8258](https://github.com/deepflowio/deepflow/pull/8258) by [yuanchaoa](https://github.com/yuanchaoa)
 * refactor: agent workspace dependencies [#8208](https://github.com/deepflowio/deepflow/pull/8208) by [TomatoMr](https://github.com/TomatoMr)
