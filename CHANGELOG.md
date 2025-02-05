@@ -8,6 +8,7 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: the initial connection CK failed, causing panic all the time [#9036](https://github.com/deepflowio/deepflow/pull/9036) by [lzf575](https://github.com/lzf575)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +251,7 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: Halt agent upgrade when disabled [#9037](https://github.com/deepflowio/deepflow/pull/9037) by [rvql](https://github.com/rvql)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
@@ -506,6 +508,7 @@
 * feat: server directly reports metrics of load1_by_cpu_num that can be used for alert [#7088](https://github.com/deepflowio/deepflow/pull/7088) by [lzf575](https://github.com/lzf575)
 
 #### Refactoring
+* refactor: [controller] remove unused function [#9038](https://github.com/deepflowio/deepflow/pull/9038) by [SongZhen0704](https://github.com/SongZhen0704)
 * refactor: Remove legacy agent config [#8586](https://github.com/deepflowio/deepflow/pull/8586) by [rvql](https://github.com/rvql)
 * refactor: modify log of configuration changes [#8258](https://github.com/deepflowio/deepflow/pull/8258) by [yuanchaoa](https://github.com/yuanchaoa)
 * refactor: agent workspace dependencies [#8208](https://github.com/deepflowio/deepflow/pull/8208) by [TomatoMr](https://github.com/TomatoMr)
