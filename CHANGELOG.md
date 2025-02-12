@@ -8,6 +8,9 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: vtap-interfaces responses invalid data [#9091](https://github.com/deepflowio/deepflow/pull/9091) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* fix: too many core files [#9082](https://github.com/deepflowio/deepflow/pull/9082) by [yuanchaoa](https://github.com/yuanchaoa)
+* fix: packet loss in l7 qg [#9079](https://github.com/deepflowio/deepflow/pull/9079) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +253,7 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: supports kv fuzzy search for vtap-interfaces api [#9076](https://github.com/deepflowio/deepflow/pull/9076) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
