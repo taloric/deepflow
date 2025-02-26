@@ -8,6 +8,9 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: the name of native tag cannot use reserved words [#9202](https://github.com/deepflowio/deepflow/pull/9202) by [lzf575](https://github.com/lzf575)
+* fix: adding an existing native tag should result in a failure [#9201](https://github.com/deepflowio/deepflow/pull/9201) by [lzf575](https://github.com/lzf575)
+* fix: Inconsistent settings and examples [#9199](https://github.com/deepflowio/deepflow/pull/9199) by [rvql](https://github.com/rvql)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
