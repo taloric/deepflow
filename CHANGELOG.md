@@ -8,6 +8,11 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: agent - eBPF Fix TCP DNS client request loss [#9218](https://github.com/deepflowio/deepflow/pull/9218) by [yinjiping](https://github.com/yinjiping)
+* fix: refactors resource event panic [#9217](https://github.com/deepflowio/deepflow/pull/9217) by [xiaochaoren1](https://github.com/xiaochaoren1)
+* Fix the wrong real ip [#9209](https://github.com/deepflowio/deepflow/pull/9209) by [yuanchaoa](https://github.com/yuanchaoa)
+* fix: embed sub template [#9208](https://github.com/deepflowio/deepflow/pull/9208) by [taloric](https://github.com/taloric)
+* fix: load yaml key case sensitive [#9204](https://github.com/deepflowio/deepflow/pull/9204) by [askyrie](https://github.com/askyrie)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +255,7 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: verify node internal address [#9213](https://github.com/deepflowio/deepflow/pull/9213) by [askyrie](https://github.com/askyrie)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
