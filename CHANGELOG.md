@@ -8,6 +8,7 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: data_source table init failed [#9266](https://github.com/deepflowio/deepflow/pull/9266) by [SongZhen0704](https://github.com/SongZhen0704)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +251,12 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: modify default query_time [#9263](https://github.com/deepflowio/deepflow/pull/9263) by [SongZhen0704](https://github.com/SongZhen0704)
+* feat: add query_time in data_source [#9255](https://github.com/deepflowio/deepflow/pull/9255) by [SongZhen0704](https://github.com/SongZhen0704)
+* feat: output k8s cluster [#9253](https://github.com/deepflowio/deepflow/pull/9253) by [askyrie](https://github.com/askyrie)
+* feat: refresh agent upgrade [#9245](https://github.com/deepflowio/deepflow/pull/9245) by [askyrie](https://github.com/askyrie)
+* feat: change custom category to custom tag category [#9228](https://github.com/deepflowio/deepflow/pull/9228) by [xiaochaoren1](https://github.com/xiaochaoren1)
+* feat: agent upgrade image add cache [#9186](https://github.com/deepflowio/deepflow/pull/9186) by [askyrie](https://github.com/askyrie)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
