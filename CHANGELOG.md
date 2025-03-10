@@ -250,6 +250,8 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: add default process_matcher rules [#9278](https://github.com/deepflowio/deepflow/pull/9278) by [taloric](https://github.com/taloric)
+* feat: agent - eBPF Get the remote IP and port of the DNS [#9275](https://github.com/deepflowio/deepflow/pull/9275) by [yinjiping](https://github.com/yinjiping)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
