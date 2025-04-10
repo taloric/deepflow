@@ -8,6 +8,7 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: agent - eBPF Fix data loss in TCP FIN_WAIT2 state (#9452) [#9457](https://github.com/deepflowio/deepflow/pull/9457) by [yinjiping](https://github.com/yinjiping)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +251,9 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: ebpf tcp dns support multi-query [#9464](https://github.com/deepflowio/deepflow/pull/9464) by [yuanchaoa](https://github.com/yuanchaoa)
+* feat: update agent user config [#9460](https://github.com/deepflowio/deepflow/pull/9460) by [askyrie](https://github.com/askyrie)
+* feat: adds gprocess id column to process table [#9448](https://github.com/deepflowio/deepflow/pull/9448) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
