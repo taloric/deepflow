@@ -8,6 +8,10 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: L7 merge send_before_window should use timeout time [#9517](https://github.com/deepflowio/deepflow/pull/9517) by [rvql](https://github.com/rvql)
+* fix: error log format [#9516](https://github.com/deepflowio/deepflow/pull/9516) by [askyrie](https://github.com/askyrie)
+* fix: process gid is released by mistake [#9514](https://github.com/deepflowio/deepflow/pull/9514) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* fix: config flow acls [#9508](https://github.com/deepflowio/deepflow/pull/9508) by [askyrie](https://github.com/askyrie)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +254,11 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: Increase session aggr max entries default value [#9524](https://github.com/deepflowio/deepflow/pull/9524) by [rvql](https://github.com/rvql)
+* feat: modify ntp log [#9519](https://github.com/deepflowio/deepflow/pull/9519) by [yuanchaoa](https://github.com/yuanchaoa)
+* feat: support x_request_id/trace_id/span_id for rocketmq [#9513](https://github.com/deepflowio/deepflow/pull/9513) by [kylewanginchina](https://github.com/kylewanginchina)
+* feat: agent - eBPF Add hook points for file read/write operations [#9511](https://github.com/deepflowio/deepflow/pull/9511) by [yinjiping](https://github.com/yinjiping)
+* feat: uses gid as process id in trisolaris [#9505](https://github.com/deepflowio/deepflow/pull/9505) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
@@ -506,6 +515,8 @@
 * feat: server directly reports metrics of load1_by_cpu_num that can be used for alert [#7088](https://github.com/deepflowio/deepflow/pull/7088) by [lzf575](https://github.com/lzf575)
 
 #### Refactoring
+* refactor: optimize l7 perf cache [#9479](https://github.com/deepflowio/deepflow/pull/9479) by [yuanchaoa](https://github.com/yuanchaoa)
+* refactor: modify template.yaml [#9472](https://github.com/deepflowio/deepflow/pull/9472) by [yuanchaoa](https://github.com/yuanchaoa)
 * refactor: Remove legacy agent config [#8586](https://github.com/deepflowio/deepflow/pull/8586) by [rvql](https://github.com/rvql)
 * refactor: modify log of configuration changes [#8258](https://github.com/deepflowio/deepflow/pull/8258) by [yuanchaoa](https://github.com/yuanchaoa)
 * refactor: agent workspace dependencies [#8208](https://github.com/deepflowio/deepflow/pull/8208) by [TomatoMr](https://github.com/TomatoMr)
