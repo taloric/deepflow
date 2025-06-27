@@ -8,6 +8,9 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: Multi ns packet capture and socket sync [#9955](https://github.com/deepflowio/deepflow/pull/9955) by [rvql](https://github.com/rvql)
+* fix: matching service, no VPC verification first [#9950](https://github.com/deepflowio/deepflow/pull/9950) by [lzf575](https://github.com/lzf575)
+* fix: incorrect l7 ebpf packet size [#9945](https://github.com/deepflowio/deepflow/pull/9945) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
