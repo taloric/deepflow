@@ -8,6 +8,10 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: agent is restarted when vpc is 0 [#9992](https://github.com/deepflowio/deepflow/pull/9992) by [yuanchaoa](https://github.com/yuanchaoa)
+* fix: responses gid to gpid-agent-request [#9990](https://github.com/deepflowio/deepflow/pull/9990) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* fix: incorrect log_retention [#9986](https://github.com/deepflowio/deepflow/pull/9986) by [yuanchaoa](https://github.com/yuanchaoa)
+* fix: the OOM caused by enabling uprobe [#9982](https://github.com/deepflowio/deepflow/pull/9982) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +254,7 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: host concatenated with port support ipv6 [#9930](https://github.com/deepflowio/deepflow/pull/9930) by [askyrie](https://github.com/askyrie)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
