@@ -8,6 +8,11 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: log level warning should be WARN [#10033](https://github.com/deepflowio/deepflow/pull/10033) by [lzf575](https://github.com/lzf575)
+* fix: too many config logs [#10030](https://github.com/deepflowio/deepflow/pull/10030) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* fix: fails to insert too long config_map [#10026](https://github.com/deepflowio/deepflow/pull/10026) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* fix: license func convert to int [#10023](https://github.com/deepflowio/deepflow/pull/10023) by [askyrie](https://github.com/askyrie)
+* fix: tagrecoder corrects the value of gprocess [#9860](https://github.com/deepflowio/deepflow/pull/9860) by [xiaochaoren1](https://github.com/xiaochaoren1)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +255,7 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: agent - eBPF Get the remote IP and port of the UDP [#10028](https://github.com/deepflowio/deepflow/pull/10028) by [Heyxk](https://github.com/Heyxk)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
