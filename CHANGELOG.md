@@ -8,6 +8,8 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: Socket info incomplete [#10042](https://github.com/deepflowio/deepflow/pull/10042) by [rvql](https://github.com/rvql)
+* fix: disable free disk breaker should trigger recovery [#10036](https://github.com/deepflowio/deepflow/pull/10036) by [lzf575](https://github.com/lzf575)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -573,3 +575,7 @@
 * use .env to config docker-compose.yaml [#7729](https://github.com/deepflowio/deepflow/pull/7729) by [asdfsx](https://github.com/asdfsx)
 * refector: add agent.proto [#7695](https://github.com/deepflowio/deepflow/pull/7695) by [yuanchaoa](https://github.com/yuanchaoa)
 * Update changelog [#7660](https://github.com/deepflowio/deepflow/pull/7660) by [lzf575](https://github.com/lzf575)
+
+
+#### Code Style
+* style: Improve socket info query log [#10056](https://github.com/deepflowio/deepflow/pull/10056) by [rvql](https://github.com/rvql)
