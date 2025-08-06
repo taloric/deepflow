@@ -250,6 +250,8 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: renames confusing message variable names [#10264](https://github.com/deepflowio/deepflow/pull/10264) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* feat: tagrecorder supports custom cloud tag [#10244](https://github.com/deepflowio/deepflow/pull/10244) by [xiaochaoren1](https://github.com/xiaochaoren1)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
