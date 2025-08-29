@@ -250,6 +250,9 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: add profile in_process metrics table [#10361](https://github.com/deepflowio/deepflow/pull/10361) by [lzf575](https://github.com/lzf575)
+* feat: improves agent config api performance [#10356](https://github.com/deepflowio/deepflow/pull/10356) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* feat: add file type field to IO event [#10355](https://github.com/deepflowio/deepflow/pull/10355) by [lzf575](https://github.com/lzf575)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
