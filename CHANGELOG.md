@@ -8,6 +8,10 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: disk io log level from warn to debug [#10381](https://github.com/deepflowio/deepflow/pull/10381) by [yuanchaoa](https://github.com/yuanchaoa)
+* fix: test-server support set grpc-buffer-size [#10376](https://github.com/deepflowio/deepflow/pull/10376) by [yuanchaoa](https://github.com/yuanchaoa)
+* fix: update auto_service/instance when gpid from process_id [#10372](https://github.com/deepflowio/deepflow/pull/10372) by [lzf575](https://github.com/lzf575)
+* fix: agent - eBPF Fix CPU affinity interference from numad for agent [#10370](https://github.com/deepflowio/deepflow/pull/10370) by [yinjiping](https://github.com/yinjiping)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +254,8 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: perf_event table change to file_event [#10365](https://github.com/deepflowio/deepflow/pull/10365) by [lzf575](https://github.com/lzf575)
+* feat: auto grpc buffer size [#10348](https://github.com/deepflowio/deepflow/pull/10348) by [askyrie](https://github.com/askyrie)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
