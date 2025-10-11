@@ -8,6 +8,13 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: eBPF Resolve ARM static compilation [#10585](https://github.com/deepflowio/deepflow/pull/10585) by [yinjiping](https://github.com/yinjiping)
+* fix: for local IP data, tag it with Agent information [#10575](https://github.com/deepflowio/deepflow/pull/10575) by [lzf575](https://github.com/lzf575)
+* fix: agent - eBPF Adjust the display of the file directory (#10551) [#10572](https://github.com/deepflowio/deepflow/pull/10572) by [yinjiping](https://github.com/yinjiping)
+* Fix ai-devel.yaml to compatibly support fork and local pr [#10571](https://github.com/deepflowio/deepflow/pull/10571) by [kylewanginchina](https://github.com/kylewanginchina)
+* fix: agent - eBPF Fix the issue of failed loading on Linux kernel 4.1… [#10566](https://github.com/deepflowio/deepflow/pull/10566) by [yinjiping](https://github.com/yinjiping)
+* fix: add wespheremq/iso8583 l7 perf stats [#10563](https://github.com/deepflowio/deepflow/pull/10563) by [lzf575](https://github.com/lzf575)
+* fix: fix bug in agent exec command [#10560](https://github.com/deepflowio/deepflow/pull/10560) by [SongZhen0704](https://github.com/SongZhen0704)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +257,9 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: genesis table add index [#10576](https://github.com/deepflowio/deepflow/pull/10576) by [askyrie](https://github.com/askyrie)
+* feat: modify the display name of the file_event table [#10568](https://github.com/deepflowio/deepflow/pull/10568) by [xiaochaoren1](https://github.com/xiaochaoren1)
+* feat: OTel adds parsing attribute network.peer.address [#10567](https://github.com/deepflowio/deepflow/pull/10567) by [lzf575](https://github.com/lzf575)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
