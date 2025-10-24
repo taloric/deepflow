@@ -250,6 +250,9 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: agent - eBPF Support Rocky Linux 5.14 [#10635](https://github.com/deepflowio/deepflow/pull/10635) by [yinjiping](https://github.com/yinjiping)
+* feat: Support storing content of exceptional requests or responses [#10634](https://github.com/deepflowio/deepflow/pull/10634) by [yuanchaoa](https://github.com/yuanchaoa)
+* feat: querier adds response ratio and success ratio metrics [#10633](https://github.com/deepflowio/deepflow/pull/10633) by [xiaochaoren1](https://github.com/xiaochaoren1)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
