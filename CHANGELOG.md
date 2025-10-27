@@ -8,6 +8,9 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: enterprise compile failed [#10664](https://github.com/deepflowio/deepflow/pull/10664) by [lzf575](https://github.com/lzf575)
+* fix: misremove tracetree trace_id_2 [#10661](https://github.com/deepflowio/deepflow/pull/10661) by [taloric](https://github.com/taloric)
+* fix: allow fuzzy search in payload [#10653](https://github.com/deepflowio/deepflow/pull/10653) by [taloric](https://github.com/taloric)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +253,10 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: app log add trace id,span id [#10662](https://github.com/deepflowio/deepflow/pull/10662) by [lzf575](https://github.com/lzf575)
+* feat: attribute web.vitals.xxx as OTel metrics [#10660](https://github.com/deepflowio/deepflow/pull/10660) by [lzf575](https://github.com/lzf575)
+* feat: add uid for dedup metrics in trace tree [#10648](https://github.com/deepflowio/deepflow/pull/10648) by [taloric](https://github.com/taloric)
+* feat: support multiple trace_ids [#10646](https://github.com/deepflowio/deepflow/pull/10646) by [lzf575](https://github.com/lzf575)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
