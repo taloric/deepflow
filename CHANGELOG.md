@@ -8,6 +8,7 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: support service matching in hostnetwork mode. [#10743](https://github.com/deepflowio/deepflow/pull/10743) by [lzf575](https://github.com/lzf575)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +251,10 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: refactor metadb sql file definition [#10745](https://github.com/deepflowio/deepflow/pull/10745) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* feat: modify service data send to ingester [#10742](https://github.com/deepflowio/deepflow/pull/10742) by [SongZhen0704](https://github.com/SongZhen0704)
+* feat: podgroup add network mode [#10740](https://github.com/deepflowio/deepflow/pull/10740) by [askyrie](https://github.com/askyrie)
+* feat: for loopback local addresses, match using peer pod [#10714](https://github.com/deepflowio/deepflow/pull/10714) by [lzf575](https://github.com/lzf575)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
