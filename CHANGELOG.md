@@ -250,6 +250,9 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: Support Case-Insensitive Matching for providerType [#10846](https://github.com/deepflowio/deepflow/pull/10846) by [SongZhen0704](https://github.com/SongZhen0704)
+* feat: eBPF Add the socktrace query command [#10838](https://github.com/deepflowio/deepflow/pull/10838) by [yinjiping](https://github.com/yinjiping)
+* feat: The app table supports whitelist configuration [#10825](https://github.com/deepflowio/deepflow/pull/10825) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
