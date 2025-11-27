@@ -8,6 +8,9 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: add flow_map apis for topo [#10902](https://github.com/deepflowio/deepflow/pull/10902) by [taloric](https://github.com/taloric)
+* fix: inputs.proc.enabled is not taking effect [#10901](https://github.com/deepflowio/deepflow/pull/10901) by [yuanchaoa](https://github.com/yuanchaoa)
+* fix: config_map db migration bug [#10900](https://github.com/deepflowio/deepflow/pull/10900) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +253,8 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: alarm policy supports custom biz service [#10907](https://github.com/deepflowio/deepflow/pull/10907) by [xiaochaoren1](https://github.com/xiaochaoren1)
+* feat: tagrecorder supports custom biz service [#10844](https://github.com/deepflowio/deepflow/pull/10844) by [xiaochaoren1](https://github.com/xiaochaoren1)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
