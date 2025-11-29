@@ -8,6 +8,11 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: slimit supports custom biz service filter [#10922](https://github.com/deepflowio/deepflow/pull/10922) by [xiaochaoren1](https://github.com/xiaochaoren1)
+* fix: only 0/1 filter in custom_service_filter [#10920](https://github.com/deepflowio/deepflow/pull/10920) by [SongZhen0704](https://github.com/SongZhen0704)
+* fix: support auto_service_id tranform by custom_biz_service_filter_map [#10917](https://github.com/deepflowio/deepflow/pull/10917) by [SongZhen0704](https://github.com/SongZhen0704)
+* fix: support backtick in auto_service_type_1 [#10916](https://github.com/deepflowio/deepflow/pull/10916) by [SongZhen0704](https://github.com/SongZhen0704)
+* fix: support backtick in auto_service_type [#10915](https://github.com/deepflowio/deepflow/pull/10915) by [SongZhen0704](https://github.com/SongZhen0704)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +255,8 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: querier add trigger threshold [#10913](https://github.com/deepflowio/deepflow/pull/10913) by [xiaochaoren1](https://github.com/xiaochaoren1)
+* feat: support disabled push [#10912](https://github.com/deepflowio/deepflow/pull/10912) by [askyrie](https://github.com/askyrie)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
