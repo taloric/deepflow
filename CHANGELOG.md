@@ -250,6 +250,9 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: eBPF Adapt to 4.19.90-23.54.v2101.ky10.x86_64 [#10928](https://github.com/deepflowio/deepflow/pull/10928) by [yinjiping](https://github.com/yinjiping)
+* feat: foreign pod add az [#10926](https://github.com/deepflowio/deepflow/pull/10926) by [askyrie](https://github.com/askyrie)
+* feat: implement agent group config changelog [#10886](https://github.com/deepflowio/deepflow/pull/10886) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
