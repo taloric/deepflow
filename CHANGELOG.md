@@ -8,6 +8,9 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: querier row close error [#11093](https://github.com/deepflowio/deepflow/pull/11093) by [xiaochaoren1](https://github.com/xiaochaoren1)
+* fix: exporters panic when get universalMaps nil [#11088](https://github.com/deepflowio/deepflow/pull/11088) by [lzf575](https://github.com/lzf575)
+* fix: reduce agent upgrade step size [#11042](https://github.com/deepflowio/deepflow/pull/11042) by [askyrie](https://github.com/askyrie)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
