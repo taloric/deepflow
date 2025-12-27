@@ -250,6 +250,13 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: eBPF TLS decryption supports OpenSSL 3.2+ [#11130](https://github.com/deepflowio/deepflow/pull/11130) by [yinjiping](https://github.com/yinjiping)
+* feat: eBPF TLS decryption supports OpenSSL 3.2+ [#11129](https://github.com/deepflowio/deepflow/pull/11129) by [yinjiping](https://github.com/yinjiping)
+* feat: support pod,host custom service [#11124](https://github.com/deepflowio/deepflow/pull/11124) by [lzf575](https://github.com/lzf575)
+* feat: add is_reversed for spantrace [#11123](https://github.com/deepflowio/deepflow/pull/11123) by [taloric](https://github.com/taloric)
+* feat: add is_reversed field [#11122](https://github.com/deepflowio/deepflow/pull/11122) by [lzf575](https://github.com/lzf575)
+* feat: support host/pod in biz service [#11120](https://github.com/deepflowio/deepflow/pull/11120) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* feat: add connect data to oracle log [#11114](https://github.com/deepflowio/deepflow/pull/11114) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
@@ -555,6 +562,7 @@
 * perf: improve parsing RequestResource from http.url of OTel data [#7172](https://github.com/deepflowio/deepflow/pull/7172) by [lzf575](https://github.com/lzf575)
 
 #### Documentation
+* docs: Remove useless config [#11126](https://github.com/deepflowio/deepflow/pull/11126) by [rvql](https://github.com/rvql)
 * docs: polish compression config [#7701](https://github.com/deepflowio/deepflow/pull/7701) by [sharang](https://github.com/sharang)
 * docs: agent correct the description of inputs.ebpf.socket.tunning [#7664](https://github.com/deepflowio/deepflow/pull/7664) by [TomatoMr](https://github.com/TomatoMr)
 * docs: rename opentemetry to opentelemetry [#7245](https://github.com/deepflowio/deepflow/pull/7245) by [lzf575](https://github.com/lzf575)
