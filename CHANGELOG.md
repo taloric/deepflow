@@ -250,6 +250,9 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: add some configuration [#11264](https://github.com/deepflowio/deepflow/pull/11264) by [SongZhen0704](https://github.com/SongZhen0704)
+* feat: migrate biz service team id [#11257](https://github.com/deepflowio/deepflow/pull/11257) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* feat: Add l7 protocol check to biz procotol inference [#11252](https://github.com/deepflowio/deepflow/pull/11252) by [rvql](https://github.com/rvql)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
@@ -555,6 +558,9 @@
 * perf: improve parsing RequestResource from http.url of OTel data [#7172](https://github.com/deepflowio/deepflow/pull/7172) by [lzf575](https://github.com/lzf575)
 
 #### Documentation
+* docs: update dubbo header extract description [#11261](https://github.com/deepflowio/deepflow/pull/11261) by [taloric](https://github.com/taloric)
+* docs: Update custom_app schema [#11260](https://github.com/deepflowio/deepflow/pull/11260) by [rvql](https://github.com/rvql)
+* docs: Update custom app schema [#11259](https://github.com/deepflowio/deepflow/pull/11259) by [rvql](https://github.com/rvql)
 * docs: polish compression config [#7701](https://github.com/deepflowio/deepflow/pull/7701) by [sharang](https://github.com/sharang)
 * docs: agent correct the description of inputs.ebpf.socket.tunning [#7664](https://github.com/deepflowio/deepflow/pull/7664) by [TomatoMr](https://github.com/TomatoMr)
 * docs: rename opentemetry to opentelemetry [#7245](https://github.com/deepflowio/deepflow/pull/7245) by [lzf575](https://github.com/lzf575)
