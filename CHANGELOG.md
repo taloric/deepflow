@@ -250,6 +250,8 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: app log support metrics [#11279](https://github.com/deepflowio/deepflow/pull/11279) by [lzf575](https://github.com/lzf575)
+* feat: support ooor timeout [#11278](https://github.com/deepflowio/deepflow/pull/11278) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
