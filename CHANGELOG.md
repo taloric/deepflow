@@ -8,6 +8,9 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: update extra_filters parse to directly query [#11291](https://github.com/deepflowio/deepflow/pull/11291) by [taloric](https://github.com/taloric)
+* fix: tolerate unknown CFI instructions on ARM64 DWARF parsing for nodejs [#11277](https://github.com/deepflowio/deepflow/pull/11277) by [kylewanginchina](https://github.com/kylewanginchina)
+* fix: correct dwarf unwind for rust and python in arm [#11273](https://github.com/deepflowio/deepflow/pull/11273) by [kylewanginchina](https://github.com/kylewanginchina)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +253,10 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: support custom service match without port [#11296](https://github.com/deepflowio/deepflow/pull/11296) by [lzf575](https://github.com/lzf575)
+* feat: modify agent group config changelog column [#11294](https://github.com/deepflowio/deepflow/pull/11294) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* feat: iso8583 endpoint rewrite [#11293](https://github.com/deepflowio/deepflow/pull/11293) by [lzf575](https://github.com/lzf575)
+* feat: webspheremq parse in agent [#11226](https://github.com/deepflowio/deepflow/pull/11226) by [lzf575](https://github.com/lzf575)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
