@@ -8,6 +8,8 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: regester vtap failed [#11338](https://github.com/deepflowio/deepflow/pull/11338) by [askyrie](https://github.com/askyrie)
+* fix: recorder cleaner performance and too big log [#11336](https://github.com/deepflowio/deepflow/pull/11336) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +252,8 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: add resp info in tracetree [#11333](https://github.com/deepflowio/deepflow/pull/11333) by [taloric](https://github.com/taloric)
+* feat: add TCP option tracing support [#10960](https://github.com/deepflowio/deepflow/pull/10960) by [qlndzt](https://github.com/qlndzt)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
