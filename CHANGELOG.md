@@ -250,6 +250,8 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: estimate RRT for ISO8583/MQ protocol [#11349](https://github.com/deepflowio/deepflow/pull/11349) by [lzf575](https://github.com/lzf575)
+* feat: deprecated unknow vtap [#11342](https://github.com/deepflowio/deepflow/pull/11342) by [askyrie](https://github.com/askyrie)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
