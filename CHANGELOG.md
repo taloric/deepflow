@@ -8,6 +8,7 @@
 ### <a id="main"></a>DeepFlow release main
 
 #### Bug Fix
+* fix: unable to obtain the ctrl ip mac [#11382](https://github.com/deepflowio/deepflow/pull/11382) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: parse 1d aggr table failed [#8645](https://github.com/deepflowio/deepflow/pull/8645) by [lzf575](https://github.com/lzf575)
 * fix: modify agent config example [#8638](https://github.com/deepflowio/deepflow/pull/8638) by [yuanchaoa](https://github.com/yuanchaoa)
 * fix: errors occurred when modifying some agent group configuration [#8602](https://github.com/deepflowio/deepflow/pull/8602) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
@@ -250,6 +251,10 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: refactor recorder cache tool [#11389](https://github.com/deepflowio/deepflow/pull/11389) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* feat: add alarm policy dynamic label [#11371](https://github.com/deepflowio/deepflow/pull/11371) by [xiaochaoren1](https://github.com/xiaochaoren1)
+* feat: refactor recorder updater [#11363](https://github.com/deepflowio/deepflow/pull/11363) by [ZhengYa-0110](https://github.com/ZhengYa-0110)
+* feat: add TPBASE and TSD extraction for multi-thread Python unwind [#11335](https://github.com/deepflowio/deepflow/pull/11335) by [kylewanginchina](https://github.com/kylewanginchina)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
@@ -506,6 +511,7 @@
 * feat: server directly reports metrics of load1_by_cpu_num that can be used for alert [#7088](https://github.com/deepflowio/deepflow/pull/7088) by [lzf575](https://github.com/lzf575)
 
 #### Refactoring
+* refactor: Remove redundant timestamp unit conversion [#11390](https://github.com/deepflowio/deepflow/pull/11390) by [rvql](https://github.com/rvql)
 * refactor: Remove legacy agent config [#8586](https://github.com/deepflowio/deepflow/pull/8586) by [rvql](https://github.com/rvql)
 * refactor: modify log of configuration changes [#8258](https://github.com/deepflowio/deepflow/pull/8258) by [yuanchaoa](https://github.com/yuanchaoa)
 * refactor: agent workspace dependencies [#8208](https://github.com/deepflowio/deepflow/pull/8208) by [TomatoMr](https://github.com/TomatoMr)
@@ -573,3 +579,7 @@
 * use .env to config docker-compose.yaml [#7729](https://github.com/deepflowio/deepflow/pull/7729) by [asdfsx](https://github.com/asdfsx)
 * refector: add agent.proto [#7695](https://github.com/deepflowio/deepflow/pull/7695) by [yuanchaoa](https://github.com/yuanchaoa)
 * Update changelog [#7660](https://github.com/deepflowio/deepflow/pull/7660) by [lzf575](https://github.com/lzf575)
+
+
+#### Testing
+* Update ai-devel.yaml for latest claude-code-action use [#11388](https://github.com/deepflowio/deepflow/pull/11388) by [kylewanginchina](https://github.com/kylewanginchina)
