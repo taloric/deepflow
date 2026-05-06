@@ -250,6 +250,9 @@
 * Fix prometheus data cannot be labeled with universal tags，if slow-decoder is used. [#7100](https://github.com/deepflowio/deepflow/pull/7100)
 
 #### NEW FEATURE
+* feat: add clickhouse storage monitor [#11695](https://github.com/deepflowio/deepflow/pull/11695) by [lzf575](https://github.com/lzf575)
+* feat(agent): add configurable socket syscall hook list [#11662](https://github.com/deepflowio/deepflow/pull/11662) by [yinjiping](https://github.com/yinjiping)
+* feat: support agent governance [#11446](https://github.com/deepflowio/deepflow/pull/11446) by [kylewanginchina](https://github.com/kylewanginchina)
 * feat: optimize memory [#8641](https://github.com/deepflowio/deepflow/pull/8641) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: support fanout in mirror mode and analyzer mode [#8587](https://github.com/deepflowio/deepflow/pull/8587) by [yuanchaoa](https://github.com/yuanchaoa)
 * feat: register esxi vtap support cloudtower [#8599](https://github.com/deepflowio/deepflow/pull/8599) by [askyrie](https://github.com/askyrie)
